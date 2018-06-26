@@ -12,9 +12,18 @@
 <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
   <style>
   .my{
-    height: 300px;
+    min-height: 300px;
     margin-bottom: 10px;
     background-color: #325476;
+  }
+  .ui.image{
+    max-width: 100%;
+  }
+
+  #my{
+      min-height: 300px;
+      margin-bottom: 10px;
+      background-color: #325476;
   }
   </style>
 </head>
@@ -44,27 +53,18 @@
     </div>
 <!--content-->
 <div class="pusher">
-
-  <div class="ui container">
-      <div class="my"></div>
-      <div class="my"></div>
-      <div class="my"></div>
-      <div class="my"></div>
-      <div class="my"></div>
-      <div class="my"></div>
-      <div class="my"></div>
-      <div class="my"></div>
-    </div>
-
+      <div class="ui container">
+        <div id="my" class="ui fluid image"> <img clas="ui image" src="assets/island.jpg"></div>
+        <div id="my" class="ui fluid image"> <img class="ui image" src="assets/concert.jpg"></div>
+        <div id="my" class="ui fluid image"> <img class="ui image" src="assets/comp.jpg"></div>
+        <div id="my" class="ui fluid image"> <img class="ui image" src="assets/meal.jpg"></div>
+        <div id="my" class="ui fluid image"><img clas="ui image" src="assets/forest.jpg"></div>
+        <div id="my" class="ui fluid image"><img clas="ui image" src="assets/flower.jpg"></div>
+        <div id="my" class="ui fluid image"><img clas="ui image" src="assets/girl.jpg"></div>
+        <div id="my" class="ui fluid image"><img clas="ui image" src="assets/cat.jpg"></div>
+      </div>
   </div>
 
-  <script>
-      $('.toc.item').click(function(){
-        $('.ui.sidebar')
-      .sidebar('toggle');
-      });
-  </script>
-
-
+  <script src="scripts.js">
   </body>
 </html>
