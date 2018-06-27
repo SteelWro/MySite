@@ -1,2 +1,4 @@
+#ignore some files that makes errors
 readme.me
 README.me
+/node_modules
