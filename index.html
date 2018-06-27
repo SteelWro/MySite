@@ -12,10 +12,9 @@
 <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="my.css">
 <style>
-@media screen {
-  
-}
-
+  body{
+    background: #000;
+  }
   .my{
     height: 100vh;
     margin-bottom: 10px;
@@ -33,8 +32,13 @@
   .ui.sidebar.small.inverted.vertical.menu.left{
     padding-top:42px;
   }
-  .ui.menu{
-    opacity: 0.85;
+  .ui.inverted.menu {
+    opacity :none;
+    background: #fc4a1a;
+    border:none;
+  }
+   .item.b{
+    opacity:none;
   }
 
   </style>
@@ -48,7 +52,7 @@
           </a>
         <div class="ui secondary inverted pointing menu">
               <div class="ui container">
-                <div class="left menu"><a class="item">#CWIKLINSKI</a></div>
+                <div class="left menu"><a class="item b">#CWIKLINSKI</a></div>
                 <div class="right menu">
                   <a href="#first" class="active item b">O mnie</a>
                   <a href="#second" class="item b">Portfolio</a>
@@ -100,7 +104,7 @@
                $(document).ready(function(){
               $('a[href^="#"]').on('click', function(event) {
 
-                    var selector = '.active.item.b';
+                    var selector = '.active.item';
                    $(selector).removeClass('active');
                     $(this).addClass('active');
   
