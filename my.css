@@ -1,1 +1,16 @@
+<style>
+  .my{
+    min-height: 300px;
+    margin-bottom: 10px;
+    background-color: #325476;
+  }
+  .ui.image{
+    max-width: 100%;
+  }
 
+  #my{
+      min-height: 300px;
+      margin-bottom: 10px;
+      background-color: #325476;
+  }
+  </style>

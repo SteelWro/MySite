@@ -10,10 +10,14 @@
 <!-- Site properties -->
 <title>Cwiklinski - JAVA</title>
 <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="/my.css">
+<link rel="stylesheet" type="text/css" href="my.css">
 <style>
+@media screen {
+  
+}
+
   .my{
-    min-height: 300px;
+    height: 100vh;
     margin-bottom: 10px;
     background-color: #325476;
   }
@@ -29,6 +33,10 @@
   .ui.sidebar.small.inverted.vertical.menu.left{
     padding-top:42px;
   }
+  .ui.menu{
+    opacity: 0.85;
+  }
+
   </style>
 </head>
 
@@ -40,12 +48,12 @@
           </a>
         <div class="ui secondary inverted pointing menu">
               <div class="ui container">
-                <div class="left menu"><a class="item">#CWIKLINSKI - WELCOME IN MY FUCKING WORLD</a></div>
+                <div class="left menu"><a class="item">#CWIKLINSKI</a></div>
                 <div class="right menu">
-                  <a class="active item">O mnie</a>
-                  <a class="item">Portfolio</a>
-                  <a class="item">Strefa czadu</a>
-                  <a class="item">Kontakt</a>
+                  <a href="#first" class="active item b">O mnie</a>
+                  <a href="#second" class="item b">Portfolio</a>
+                  <a href="#third" class="item b">Strefa czadu</a>
+                  <a href="#fourth" class="item b">Kontakt</a>
                 </div>
             </div>
         </div>
@@ -61,31 +69,52 @@
       <!--content-->
       <div class="pusher">
           <div class="ui container">
-            <div id="my" class="ui fluid image"><img clas="ui image" src="assets/island.jpg"></div>
-            <div id="my" class="ui fluid image"><img class="ui image" src="assets/concert.jpg"></div>
-            <div id="my" class="ui fluid image"><img class="ui image" src="assets/comp.jpg"></div>
-            <div id="my" class="ui fluid image"><img class="ui image" src="assets/meal.jpg"></div>
-            <div id="my" class="ui fluid image"><img clas="ui image" src="assets/forest.jpg"></div>
-            <div id="my" class="ui fluid image"><img clas="ui image" src="assets/flower.jpg"></div>
-            <div id="my" class="ui fluid image"><img clas="ui image" src="assets/girl.jpg"></div>
-            <div id="my" class="ui fluid image"><img clas="ui image" src="assets/cat.jpg"></div>
+            <div id="first" class="ui fluid image my"><img clas="ui image" src="assets/island.jpg"></div>
+            <div id="second" class="ui fluid image my"><img class="ui image" src="assets/concert.jpg"></div>
+            <div id="third" class="ui fluid image my"><img class="ui image" src="assets/comp.jpg"></div>
+            <div id="fourth" class="ui fluid image my"><img class="ui image" src="assets/meal.jpg"></div>
+            <div id="my" class="ui fluid image"><img class="" ="ui image" src="assets/forest.jpg"></div>
+            <div id="my" class="ui fluid image"><img class="" ="ui image" src="assets/flower.jpg"></div>
+            <div id="my" class="ui fluid image"><img class="ui image" src="assets/girl.jpg"></div>
+            <div id="my" class="ui fluid image"><img class="ui image" src="assets/cat.jpg"></div>
           </div>
       </div>
+
+    </body>
+  </body>
+
 
       <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous">
       </script>
-
       <script src="semantic/dist/semantic.min.js"></script>
+      <script type="text/javascript">
+              $('.toc.item').click(function(){
+                $('.ui.sidebar')
+              .sidebar('toggle');
+              });
 
-      <script>
-          $('.toc.item').click(function(){
-            $('.ui.sidebar')
-          .sidebar('toggle');
-          });
+
+               $(document).ready(function(){
+              $('a[href^="#"]').on('click', function(event) {
+
+                    var selector = '.active.item.b';
+                   $(selector).removeClass('active');
+                    $(this).addClass('active');
+  
+                  var target = $( $(this).attr('href') );
+              
+                  if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                  }
+              });
+           });
       </script>
-    </body>
-  </body>
+      
+
 </html>
