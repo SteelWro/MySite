@@ -1,4 +1,4 @@
-<style>
+
   .my{
     min-height: 300px;
     margin-bottom: 10px;
@@ -13,4 +13,44 @@
       margin-bottom: 10px;
       background-color: #325476;
   }
-  </style>
+  body{
+    background: #000;
+  }
+  .my{
+    height: 100vh;
+    margin-bottom: 10px;
+    background-color: #325476;
+  }
+  .ui.image{
+    max-width: 100%;
+  }
+
+  #my{
+      min-height: 300px;
+      margin-bottom: 10px;
+      background-color: #325476;
+  }
+  .ui.sidebar.small.inverted.vertical.menu.left{
+    padding-top:42px;
+  }
+  .ui.inverted.menu {
+    opacity :none;
+    background: #fc4a1a;
+    border:none;
+  }
+   .item.b{
+    opacity:none;
+  }
+
+ i.sidebar{
+  	display: none;
+  }
+
+@media(max-width: 992px){
+	i.sidebar{
+		display: block;
+	}
+	.right.menu a.item{
+		display: none !important;
+	}
+}
