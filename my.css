@@ -1,21 +1,11 @@
 
-  .my{
-    min-height: 300px;
-    margin-bottom: 10px;
-    background-color: #325476;
-  }
   .ui.image{
     max-width: 100%;
   }
-
-  #my{
-      min-height: 300px;
-      margin-bottom: 10px;
-      background-color: #325476;
-  }
-  body{
-    background: #000;
-  }
+ 
+  body.pushable>.pusher {
+    background: #999;
+}
   .my{
     height: 100vh;
     margin-bottom: 10px;
@@ -31,7 +21,7 @@
       background-color: #325476;
   }
   .ui.sidebar.small.inverted.vertical.menu.left{
-    padding-top:42px;
+    padding-top:0px;
   }
   .ui.inverted.menu {
     opacity :none;

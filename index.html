@@ -37,11 +37,11 @@
       </div>
       <!--sidebar menu-->
   <body class="pushable">
-        <div class="ui sidebar small inverted vertical menu left ">
-          <a class="item">O mnie</a>
-          <a class="item">Portfolio</a>
-          <a class="item">Strefa czadu</a>
-          <a class="item">Kontakt</a>
+        <div class="ui sidebar small thin inverted vertical menu left ">
+          <a href="#first" class="item">O mnie</a>
+          <a href="#second" class="item">Portfolio</a>
+          <a href="#third" class="item">Strefa czadu</a>
+          <a href="#fourth" class="item">Kontakt</a>
       </div>
       <!--content-->
       <div class="pusher">
@@ -72,6 +72,7 @@
       <script type="text/javascript">
               $('.toc.item').click(function(){
                 $('.ui.sidebar')
+                .sidebar('setting', 'transition', 'overlay')
               .sidebar('toggle');
               });
 
@@ -91,6 +92,7 @@
                         scrollTop: target.offset().top
                     }, 1000);
                   }
+                  $('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('hide');
               });
            });
       </script>
