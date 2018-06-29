@@ -42,13 +42,13 @@
     opacity:none;
   }
 
- i.sidebar{
-  	display: none;
+a.toc.item{
+  	display: none !important;
   }
 
 @media(max-width: 992px){
-	i.sidebar{
-		display: block;
+	a.toc.item{
+		display: block !important;
 	}
 	.right.menu a.item{
 		display: none !important;
