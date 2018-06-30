@@ -4,7 +4,7 @@
   }
  
   body.pushable>.pusher {
-    background: #999;
+    background: #d5d5d5;
 }
   .my{
     height: 100vh;
@@ -23,10 +23,14 @@
   .ui.sidebar.small.inverted.vertical.menu.left{
     padding-top:0px;
   }
-  .ui.inverted.menu {
+  .ui.menu {
     opacity :none;
-    background: #fc4a1a;
+    background: #373737;
     border:none;
+    border-radius: 0px 0px 50px 50px;
+  }
+  .ui.menu.fixed{
+  	border-radius: 0px 0px 30px 30px !important; 
   }
    .item.b{
     opacity:none;
