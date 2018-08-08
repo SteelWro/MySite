@@ -9,56 +9,52 @@
 <meta name="author" content="Artur Cwiklinski">
 <!-- Site properties -->
 <title>Cwiklinski - JAVA</title>
-
-
 <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="my.css">
-
-
 </head>
 
-<body>
-      <!--following menu-->
-      <div class="ui fixed inverted left menu">
-          <a class="toc item">
-            <i class="sidebar icon"></i>
-          </a>
-        <div class="ui secondary inverted pointing menu">
-              <div class="ui container">
-                <div class="left menu"><a class="item b">#CWIKLINSKI</a></div>
-                <div class="right menu">
-                  <a href="#first" class="active item b">O mnie</a>
-                  <a href="#second" class="item b">Portfolio</a>
-                  <a href="#third" class="item b">Strefa czadu</a>
-                  <a href="#fourth" class="item b">Kontakt</a>
-                </div>
+  <body>
+        <!--following menu-->
+        <div class="ui fixed inverted left menu">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+          <div class="ui secondary inverted pointing menu">
+                <div class="ui container">
+                  <div class="left menu"><a class="item b">#CWIKLINSKI</a></div>
+                  <div class="right menu">
+                    <a href="#first" class="active item b">O mnie</a>
+                    <a href="#second" class="item b">Portfolio</a>
+                    <a href="#third" class="item b">Strefa czadu</a>
+                    <a href="#fourth" class="item b">Kontakt</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!--sidebar menu-->
+    <body class="pushable">
+          <div class="ui sidebar small thin inverted vertical menu top ">
+            <a href="#first" class="item">O mnie</a>
+            <a href="#second" class="item">Portfolio</a>
+            <a href="#third" class="item">Strefa czadu</a>
+            <a href="#fourth" class="item">Kontakt</a>
+        </div>
+        <!--content-->
+        <div class="pusher">
+            <div class="ui container main">
+              <div id="first" class="ui fluid image my"><img class="ui image" src="assets/island.jpg"></div>
+              <div id="" class="ui fluid image my"><img class="ui image" src="assets/concert.jpg"></div>
+              <div id="second" class="ui fluid image my"><img class="ui image" src="assets/comp.jpg"></div>
+              <div id="" class="ui fluid image my"><img class="ui image" src="assets/meal.jpg"></div>
+              <div id="" class="ui fluid image my"><img class="ui image" ="ui image" src="assets/forest.jpg"></div>
+              <div id="third" class="ui fluid image my"><img class="ui image" ="ui image" src="assets/flower.jpg"></div>
+              <div id="" class="ui fluid image my"><img class="ui image" src="assets/girl.jpg"></div>
+              <div id="fourth" class="ui fluid image my"><img class="ui image" src="assets/cat.jpg"></div>
             </div>
         </div>
-      </div>
-      <!--sidebar menu-->
-  <body class="pushable">
-        <div class="ui sidebar small thininverted vertical menu left ">
-          <a href="#first" class="item">O mnie</a>
-          <a href="#second" class="item">Portfolio</a>
-          <a href="#third" class="item">Strefa czadu</a>
-          <a href="#fourth" class="item">Kontakt</a>
-      </div>
-      <!--content-->
-      <div class="pusher">
-          <div class="ui container">
-            <div id="first" class="ui fluid image my"><img clas="ui image" src="assets/island.jpg"></div>
-            <div id="second" class="ui fluid image my"><img class="ui image" src="assets/concert.jpg"></div>
-            <div id="third" class="ui fluid image my"><img class="ui image" src="assets/comp.jpg"></div>
-            <div id="fourth" class="ui fluid image my"><img class="ui image" src="assets/meal.jpg"></div>
-            <div id="my" class="ui fluid image"><img class="" ="ui image" src="assets/forest.jpg"></div>
-            <div id="my" class="ui fluid image"><img class="" ="ui image" src="assets/flower.jpg"></div>
-            <div id="my" class="ui fluid image"><img class="ui image" src="assets/girl.jpg"></div>
-            <div id="my" class="ui fluid image"><img class="ui image" src="assets/cat.jpg"></div>
-          </div>
-      </div>
 
+      </body>
     </body>
-  </body>
 
 
 
@@ -72,17 +68,19 @@
       <script type="text/javascript">
               $('.toc.item').click(function(){
                 $('.ui.sidebar')
-                .sidebar('setting', 'transition', 'overlay')
-              .sidebar('toggle');
-              });
+                              .sidebar('setting', 'defaultTransition', 'overlay')
+                              .sidebar('toggle')
+                              });
+               
 
 
-               $(document).ready(function(){
+    
+              $(document).ready(function(){
               $('a[href^="#"]').on('click', function(event) {
 
-                    var selector = '.active.item';
-                   $(selector).removeClass('active');
-                    $(this).addClass('active');
+                  var selector = '.active.item';
+                  $(selector).removeClass('active');
+                  $(this).addClass('active');
   
                   var target = $( $(this).attr('href') );
               
@@ -92,12 +90,15 @@
                         scrollTop: target.offset().top
                     }, 1000);
                   }
-                  $('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('hide');
+                   $('.ui.sidebar').sidebar('hide')
+                });
               });
-           });
+
+
+              
       </script>
 
-      <script src="scripts.js" type="text/javascript"></script>
+      
       
 
 </html>
