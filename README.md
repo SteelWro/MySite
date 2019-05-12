@@ -1,2 +1,1 @@
-# SteelWro.github.io
-Site devoted to me!
+This is my first contact with Semantic UI. 
